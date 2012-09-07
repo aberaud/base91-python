@@ -9,8 +9,11 @@ Usage
 > import base91
 > 
 > base91.encode('test')
+
 result: fPNKd
+
 > 
 > base91.decode('8D9Kc)=/2$WzeFui#G9Km+<{VT2u9MZil}[A')
+
 result: May a moody baby doom a yam?\n
 
