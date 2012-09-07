@@ -6,14 +6,10 @@ A python implementation of Base91 as described on http://base91.sourceforge.net/
 Usage
 -----
 
-> import base91
-> 
-> base91.encode('test')
+	import base91
 
-result: fPNKd
+	base91.encode('test')						#result: 'fPNKd'
+	base91.encode(b'\xfe\x03\x00W\xa9\xbc') 	#result: 'VLv(GdNE'
 
-> 
-> base91.decode('8D9Kc)=/2$WzeFui#G9Km+<{VT2u9MZil}[A')
-
-result: May a moody baby doom a yam?\n
+	base91.decode('8D9Kc)=/2$WzeFui#G9Km+<{VT2u9MZil}[A') # result: 'May a moody baby doom a yam?\n'
 
