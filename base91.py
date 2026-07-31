@@ -54,7 +54,7 @@ def decode(encoded_str):
         else:
             v += c*91
             b |= v << n
-            n += 13 if (v & 8191)>88 else 14
+            n += 13 if v // 91 > 89 else 14
             while True:
                 out += struct.pack('B', b&255)
                 b >>= 8
@@ -77,7 +77,7 @@ def encode(bindata):
         n += 8
         if n>13:
             v = b & 8191
-            if v > 88:
+            if v // 91 > 89:
                 b >>= 13
                 n -= 13
             else:
